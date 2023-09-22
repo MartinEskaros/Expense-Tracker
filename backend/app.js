@@ -20,3 +20,10 @@ app.get('/', (req,res) => {
 })
 
 
+const server = () => {
+    app.listen(PORT, () => {
+        console.log('listening to port:', PORT)
+    })
+}
+
+server()
