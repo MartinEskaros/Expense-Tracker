@@ -1,3 +1,6 @@
+//Imports the IncomeSchema from the incomeModel file. This is the Mongoose model that 
+//represents the structure of an "Income" document in the MongoDB database.
+
 const IncomeSchema = require("../models/incomeModel")
 
 
@@ -38,3 +41,13 @@ exports.addIncome = async (req, res) =>{
     console.log(income)
 }
 
+//method to get income documents
+
+exports.getIncomes = async (req, res) =>{
+    try {
+        const incomes = await IncomeSchema.find().sort({createdAt: -1});
+        res.status(200).json(incomes)
+    } catch (error) {
+        res.status(500).json({message: 'Server Error'})
+    }
+}
