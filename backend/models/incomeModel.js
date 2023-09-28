@@ -41,3 +41,6 @@ const IncomeSchema = new mongoose.Schema({
 
 // Export Income model based on the IncomSchema to be used in other parts of the application
 module.exports = mongoose.model('Income', IncomeSchema)
+
+//Here we are basically compiling the IncomeSchema into a model called "Income". When we are going to require it in the 
+//Controller income, it is best to name it 'Income" as this is the name of the model.
