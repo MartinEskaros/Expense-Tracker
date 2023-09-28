@@ -1,7 +1,7 @@
-//Imports the IncomeSchema from the incomeModel file. This is the Mongoose model that 
+//Imports the Income model from the incomeModel file. This is the Mongoose model that 
 //represents the structure of an "Income" document in the MongoDB database.
 
-const IncomeSchema = require("../models/incomeModel")
+const Income = require("../models/incomeModel")
 
 
 //Method to add income
@@ -11,7 +11,7 @@ exports.addIncome = async (req, res) =>{
     const {title,amount,category, description,date} = req.body
 
     //Creating a new income instance using the provided data.
-    const income = IncomeSchema({
+    const income = Income({
         title,
         amount,
         category,
@@ -45,7 +45,7 @@ exports.addIncome = async (req, res) =>{
 
 exports.getIncomes = async (req, res) =>{
     try {
-        const incomes = await IncomeSchema.find().sort({createdAt: -1});
+        const incomes = await Income.find().sort({createdAt: -1});
         res.status(200).json(incomes)
     } catch (error) {
         res.status(500).json({message: 'Server Error'})
@@ -53,8 +53,8 @@ exports.getIncomes = async (req, res) =>{
 }
 
 exports.deleteIncome = async (req,res) => {
-    const {id} = req.params;    
-    IncomeSchema.findByIdAndDelete(id)
+    const {id} = req.params;    // Destructure the 'id' from the request parameters (i.e., the part of the URL defined by `:id`).
+    Income.findByIdAndDelete(id)  //find document by 'id' and delete it from the MongoDB collection.
         .then((income) =>{
             res.status(200).json({message: 'Income Deleted'})
         })    
