@@ -1,16 +1,33 @@
+import styled from "styled-components";
+import bg from './img/background.jpg';
+import { MainLayout } from "./styles/Layout";
+import Orb from "./Components/Orb/Orb";
+
+
 
 
 function App() {
-  
-
   return (
-    
-      
-      <div className='App'>
+      <AppStyled bg={bg} className='App'>
+        <Orb />
+        <MainLayout>
+          
+        </MainLayout>
 
-      </div>
+      </AppStyled>
         
   );
 }
 
-export default App
+const AppStyled = styled.div`
+  height: 100vh;
+  background-image: url(${props => props.bg});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+`;
+
+
+
+export default App;
