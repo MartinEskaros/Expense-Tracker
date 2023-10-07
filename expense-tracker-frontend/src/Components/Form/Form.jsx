@@ -104,7 +104,6 @@ const FormStyled = styled.form`
         font-size: 20px;
         outline: none;
         margin-left: 30px;
-        margin-right: ;
         padding: .5rem 1rem;
         border-radius: 5px;
         border: 2px solid white;
