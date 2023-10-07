@@ -5,7 +5,7 @@ export const expenses = <i className="fa-solid fa-money-bill-transfer"></i>
 export const signout = <i className="fa-solid fa-right-from-bracket"></i>
 export const plus = <i className="fa-solid fa-plus"></i>
 export const dollar = <i className="fa-solid fa-dollar-sign"></i>
-export const calender = <i className="fa-solid fa-calendar"></i>
+export const calendar = <i className="fa-solid fa-calendar"></i>
 export const money = <i className="fa-solid fa-money-bill"></i>
 export const freelance = <i className ="fa-solid fa-earth-americas"></i>
 export const stocks = <i className="fa-solid fa-arrow-trend-up"></i>
