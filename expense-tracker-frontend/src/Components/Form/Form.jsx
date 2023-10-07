@@ -62,7 +62,7 @@ function Form() {
         </div>
         <div className="selects input-control">
                 <select required value={category} name="category" id="category" onChange={handleInput('category')}>
-                    <option value=""  disabled >Select Option</option>
+                    <option value=""  disabled >Select Category</option>
                     <option value="salary">Salary</option>
                     <option value="freelancing">Freelancing</option>
                     <option value="investments">Investments</option>
@@ -72,6 +72,9 @@ function Form() {
                     <option value="youtube">Youtube</option>  
                     <option value="other">Other</option>  
                 </select>
+            </div>
+            <div className="input-control">
+              <textarea name="description" value={description} placeholder="Add Description" id="description" cols="30" rows="4" onChange={handleInput('description')}></textarea>
             </div>
             <div className="submit-btn">
             <Button 
@@ -101,6 +104,7 @@ const FormStyled = styled.form`
         font-size: 20px;
         outline: none;
         margin-left: 30px;
+        margin-right: ;
         padding: .5rem 1rem;
         border-radius: 5px;
         border: 2px solid white;
@@ -116,7 +120,7 @@ const FormStyled = styled.form`
     }
     .input-control{
         input{
-            
+            width: 90%;
         }
     }
 
