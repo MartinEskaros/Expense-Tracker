@@ -89,6 +89,7 @@ function IncomeItem({           //Income that you will see when getting incomes
                             color={'#fff'}
                             iColor={'#fff'}
                             hColor={'var(--color-green)'}
+                            onClick={() => deleteItem(id)}
                            
                         />
                     </div>
