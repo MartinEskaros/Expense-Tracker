@@ -57,12 +57,12 @@ export const GlobalProvider = ({children}) => {
     }
 
     const totalExpenses = () => {
-        let totalIncome = 0;
-        expenses.forEach((income) =>{
-            totalIncome = totalIncome + income.amount
+        let totalExpense = 0;
+        expenses.forEach((expense) =>{
+            totalExpense = totalExpense + expense.amount
         })
 
-        return totalIncome;
+        return totalExpense;
     }
 
     
