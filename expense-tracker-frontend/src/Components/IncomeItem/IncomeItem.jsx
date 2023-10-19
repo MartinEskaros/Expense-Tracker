@@ -2,6 +2,9 @@ import React from 'react'
 import { bitcoin, book, calendar, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../../utils/Icons';
 import Button from '../Button/Button';
 import styled from 'styled-components';
+import moment from 'moment';
+
+
 
 function IncomeItem({           //Income that you will see when getting incomes
     id,
@@ -68,7 +71,7 @@ function IncomeItem({           //Income that you will see when getting incomes
                 <div className="inner-content">
                     <div className="text">
                         <p>{dollar} {amount}</p>
-                        <p>{calendar} {date}</p>
+                        <p>{calendar} {moment(date).format('DD/MM/YYYY')}</p>
                         <p>
                             {comment}
                             {description}
