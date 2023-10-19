@@ -33,17 +33,7 @@ function IncomeItem({           //Income that you will see when getting incomes
                 return card;
             case 'youtube':
                 return yt;
-            case 'other':
-                return piggy;
-            default:
-                return ''
-        }
-    }
-
-
-    const expenseCatIcon = () => {
-        switch (category) {
-            case 'education':
+                case 'education':
                 return book;
             case 'groceries':
                 return food;
@@ -59,10 +49,14 @@ function IncomeItem({           //Income that you will see when getting incomes
                 return freelance;
             case 'other':
                 return circle;
+            case 'other':
+                return piggy;
             default:
                 return ''
         }
     }
+
+
 
   return (
     <IncomeItemStyled indicator={indicatorColor}>
