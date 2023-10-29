@@ -32,9 +32,21 @@ function Chart() {
     const sortedIncomes = incomes.sort((a, b) => moment(a.date).isBefore(b.date) ? -1 : 1);
     const sortedExpenses = expenses.sort((a, b) => moment(a.date).isBefore(b.date) ? -1 : 1);
 
+
     const incomeDates = sortedIncomes.map(inc => moment(inc.date).format('DD/MM/YYYY'));
     const expenseDates = sortedExpenses.map(exp => moment(exp.date).format('DD/MM/YYYY'));
     const allDates = Array.from(new Set([...incomeDates, ...expenseDates])).sort((a, b) => moment(a).isBefore(b) ? -1 : 1);
+
+    const allTransactions = [...sortedIncomes, ...sortedExpenses].sort((a, b) => moment(a.date).isBefore(b.date) ? -1 : 1);
+
+    let balance = 0;
+    const balanceData = allTransactions.map(transaction => {
+        balance += transaction.amount * (transaction.type === 'Income' ? 1 : -1);
+        return {
+            x: moment(transaction.date).format('DD/MM/YYYY'),
+            y: balance
+        };
+    });
 
     const incomeData = sortedIncomes.map(inc => ({
         x: moment(inc.date).format('DD/MM/YYYY'),
@@ -58,6 +70,12 @@ function Chart() {
                 label: 'Expenses',
                 data: expenseData,
                 backgroundColor: 'red',
+                tension: .2
+            },
+            {
+                label: 'Total Balance',
+                data: balanceData,
+                backgroundColor: 'blue',
                 tension: .2
             }
         ]
