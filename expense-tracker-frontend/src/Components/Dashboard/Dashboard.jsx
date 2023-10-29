@@ -96,7 +96,7 @@ const DashboardStyled = styled.div`
                     p{
                         color: var(--color-green);
                         opacity: 0.6;
-                        font-size: 4.5rem;
+                        font-size: 3.5rem;
                     }
                 }
             }
@@ -109,26 +109,7 @@ const DashboardStyled = styled.div`
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-            }
-            .salary-title{
-                font-size: 1.2rem;
-                span{
-                    font-size: 1.8rem;
-                }
-            }
-            .salary-item{
-                background: #FCF6F9;
-                border: 2px solid #FFFFFF;
-                box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
-                padding: 1rem;
-                border-radius: 20px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                p{
-                    font-weight: 600;
-                    font-size: 1.6rem;
-                }
+                
             }
         }
     }
