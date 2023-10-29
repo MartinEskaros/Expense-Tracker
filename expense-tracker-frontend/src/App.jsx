@@ -9,6 +9,8 @@ import Expenses from "./Components/Expenses/Expenses";
 import Income from "./Components/Incomes/Income";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import { useGlobalContext } from "./context/globalContext";
+import TradingViewCharts from "./Components/TradingViewCharts/TradingViewCharts";
+import DexScreenerChart from "./Components/TradingViewCharts/DexScreenerCharts";
 
 
 
@@ -28,6 +30,10 @@ function App() {
           return <Income/>
         case 4:
           return <Expenses/>
+        case 5:
+          return <TradingViewCharts/>
+        case 6:
+            return <DexScreenerChart/>   //do this and inport it
         default: 
           return <Dashboard/>
       }
