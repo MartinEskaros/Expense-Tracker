@@ -23,3 +23,5 @@ export const food = <i className="fa-solid fa-bowl-food"></i>
 export const medical = <i className="fa-solid fa-briefcase-medical"></i>
 export const tv = <i className="fa-solid fa-tv"></i>
 export const circle = <i className="fa-solid fa-circle-dot"></i>
+export const StockChart = <i class="fa-solid fa-chart-simple"></i>
+export const eth = <i class="fa-brands fa-ethereum"></i>
