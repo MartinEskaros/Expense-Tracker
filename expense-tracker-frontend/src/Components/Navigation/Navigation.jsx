@@ -14,7 +14,7 @@ function Navigation({active,setActive}) {
             <img src={avatar} alt="" />
             <div className="text">
                 <h2>Martin</h2>
-                <p>Your Money</p>
+                <p>Portfolio</p>
             </div>
         </div>
         <ul className="menu-items">
